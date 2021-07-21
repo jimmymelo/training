@@ -4,9 +4,9 @@ library(quantmod)
 MSFT<-getSymbols("MSFT",from="2020-03-05",to="2021-03-05",src="yahoo",periodicity="daily",auto.assign=F)[,6]
 ####RENDIMIENTOS
 RMSFT<-na.omit(ROC(MSFT,n=1,type="continuous",na.pad=T))
-#### INFORMACI?N RESPECTO DEBT/EQUITY RATIO: 1.5=D/C
+#### INFORMACION RESPECTO DEBT/EQUITY RATIO: 1.5=D/C
 D<-MSFT[[length(MSFT)]]*5.5
-t<-1
+t<-0+1
 sdc<-sqrt(var(RMSFT)*252)
 ###  12-Month London Interbank Offered Rate (LIBOR), based on U.S. Dollar (USD12MD156N)
 library(quantmod)
